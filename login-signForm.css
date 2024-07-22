@@ -1,0 +1,49 @@
+/* Ensure this is your existing CSS file */
+
+* {
+    font-family: "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    margin: 0;
+}
+
+/* Maintain existing styles */
+.sidedash-container {
+    background: grey;
+    height: 100%;
+    width: 200px;
+}
+
+.whole-container {
+    display: flex;
+}
+
+.right-container {
+    max-width: fit-content;
+    margin-inline: auto;
+    padding: 20px; /* Add padding for spacing */
+}
+
+.main-header {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main-content {
+    display: flex;
+    gap: 20px;
+}
+
+.content-section {
+    background-color: #e9e9e9;
+    padding: 20px;
+    border-radius: 5px;
+    flex: 1; /* Ensure both sections take equal space */
+}
+
+.content-section h2 {
+    text-align: center;
+}
+
+/* Additional adjustments as per your design */
+

@@ -1,0 +1,1134 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
+
+
+* {
+    font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+   margin: 0;
+   
+}
+
+body{
+    background: linear-gradient(to bottom, #ffffff, #dfffdf);
+    overflow: hidden;
+  
+}
+
+.table-container {
+    max-height: 400px; /* Adjust based on your preferred height */
+    overflow-y: auto;
+}
+
+
+.table-container thead .lowerhead th{
+    position: sticky;
+    top: 0;
+    
+    z-index: 1; /* Ensure the header stays above the table body */
+
+}
+
+
+
+form{
+    text-align: left;
+    display: flex;
+    margin: 0;
+   
+    
+    
+}
+
+
+
+.gen-search{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+
+ 
+  
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    text-align: center;
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 5% auto;
+    padding: 30px 5px 40px 5px;
+    border: none;
+    width: 30%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(0); /* Start scale for animation */
+    animation: bounceIn 0.6s forwards; /* Apply animation */
+}
+
+.modal-content input {
+    border-radius: 0;
+    font-size: 15px;
+    padding: 5px 39px;
+    margin-top: 10px;
+    border: solid 1px grey;
+}
+
+.modal-content button {
+    margin: 20px 0 0 0;
+    padding: 10px 40px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.modal-content #modalSubmit {
+    background-color: red;
+    color: white;
+    margin-right: 10px;
+}
+
+.modal-content #modalSubmit:hover {
+    background-color: rgb(255, 92, 92);
+}
+
+.modal-content #modalCancel {
+    background-color: #575757;
+    color: white;
+    margin-left: 10px;
+}
+
+.modal-content #modalCancel:hover {
+    background-color: #969696;
+}
+
+.error-message {
+    margin: 20px 0 0 0;
+    color: red;
+    display: none;
+}
+
+/* Keyframes for the bouncing expand animation */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0);
+    }
+    60% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes bounceOut {
+    0% {
+        transform: scale(1);
+    }
+    40% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+
+
+
+  .searchTble {
+    margin: 50px 500px 50px 500px;
+  }
+
+.sidedash-container {
+    background: #FBFAF5;
+    height: 100vh;
+    width: 200px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+  
+.whole-container{
+    display: flex ;
+}
+
+
+.right-container {
+    height: 100vh;
+    
+    margin: 0;
+   
+    
+}
+
+
+.date {
+    padding: 4px 36.5px;
+}
+
+
+
+.sidedash-container a {
+    display: block;
+    color: rgb(122, 122, 122);
+    padding: 27px;
+    text-decoration: none;
+    font-weight: bolder;
+    margin: 0 0 0 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 13px;
+}
+
+.sidedash-container .nowrap{
+    text-wrap: nowrap;
+}
+
+.sidedash-container a:hover {
+    background-color: #228B22;
+    color: white;
+}
+
+form .tin2{
+    margin-left: 59px;
+    
+}
+
+
+.lower-input {
+    margin-top: 12px;
+}
+
+
+
+
+form {
+    margin: 0 0 0 50px;
+}
+
+.searchID {
+    margin: 0 0 0 0;
+}
+
+.searchbtnID {
+    margin: 0 0 0 -5px;
+    border-left: solid 1px;
+    border-color: #228B22;
+    font-size: 15px;
+    padding: 3px 9px 4px 9px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.sidedash-container .selectedDash{
+    background-color: #228B22;
+    color: white;
+}
+
+.add {
+    margin: 0 0 0 20px;
+}
+
+
+.sidedash-container .home{
+    padding: 31.5px;
+    font-size: 20px;
+}
+
+.navbar h2 {
+    text-align: left;
+    padding: 0 0 0 20px;
+    color: white;
+  
+    
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #228B22;
+    padding: 10px;
+    color: white;
+    width: 85vw;
+    height: 70px;
+    margin: auto;
+    box-shadow: 10px 5px 10px 0 rgba(0, 0, 0, 0.2);
+   
+}
+
+
+
+
+.navbar-left {
+    display: flex;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 2px;
+    margin-left: 0;
+}
+
+.admin-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.timestamp {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.nameLabel {
+    margin-left: 0;
+}
+
+.dateLabel {
+    margin-left: 10px;
+}
+
+.addressLabel{
+    margin-left: 10px;
+}
+
+form label{
+    color: #1e701e;
+    font-weight: 450;
+   
+}
+
+
+
+form select {
+    text-align: center;
+    border: solid 1px #228B22;
+    outline: none;
+}
+
+form select:focus{
+   border: solid 1px #32CD32;
+}
+form button{
+    outline: none;
+    border: solid 1px #228B22;
+    background:  #228B22;
+    color: white;
+    font-size: 12px;
+   
+    padding: 6px 11px 5px 11px;
+    font-weight: 500;
+    border-radius: 3px;
+   
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+form button:hover{
+    background-color: #48fc48;
+    border-color: #48fc48;
+    color: white;
+}
+form input, select{
+    padding: 5px 20px;
+    font-size: 13px;
+    border: solid 1px #228B22;
+  color: #272727;
+ 
+  border-radius: 3px;
+
+  
+  
+}
+
+.gen-search #searchGenQuery{
+    padding-left: 12px;
+  
+}
+
+form .search{
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.gen-search input{
+    
+    font-size: 13px;
+  color: #333;
+  border: solid 1px #228B22;
+  border-radius: 2px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1);
+}
+
+.gen-search input:focus{
+    border: solid 1px #32CD32;
+    outline: none;
+}
+
+
+.gen-search .searchbtn{
+    font-size: 15px;
+    padding: 5px 10px 5px 10px;
+}
+
+.gen-search .searchDateBtn{
+    font-size: 15px;
+    padding: 5px 10px 5px 10px;
+}
+
+.gen-search .resetTableBtn{
+    font-size: 15px;
+    padding: 5px 10px 5px 10px;
+}
+.gen-search button{
+    outline: none;
+    border:solid 1px #228B22;
+    background-color: #228B22;
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 7px 13px 6px 13px;
+    border-radius: 2px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.gen-search button:hover{
+    background-color: #48fc48;
+    border-color: #48fc48;
+    color: white;
+    
+}
+
+.gen-search .search{
+    padding: 6.7px 0px
+}
+
+.gen-search #startDate,#endDate{
+    padding: 6px 7px 5px 7px;
+    text-align: center;
+    
+}
+
+.right-section {
+    background: #FBFAF5;
+    padding: 20px 0 0 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    
+  
+    
+    
+}
+
+form input:focus{
+    border: solid 1px #32CD32;
+    outline: none;
+}
+
+
+table {
+    background: #FBFAF5;
+    border-collapse: collapse;
+    height: 1px;
+    margin: auto;
+    max-width: 1000px;
+    padding:5px;
+    width: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    animation: float 5s infinite;
+    border: solid 1px #228B22;
+  }
+
+  
+   
+  th {
+    color:#FBFAF5;
+    background:#228B22;
+    border-right: 1px solid #C1C3D1;
+    font-size:15px;
+    font-weight: 350;
+    padding:10px;
+    text-align:center;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    vertical-align:middle;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  
+  th:last-child {
+   
+    border-right:none;
+  }
+    
+  tr {
+    border-top: 1px solid #C1C3D1;
+    border-bottom: 1px solid #C1C3D1;
+    color:#666B85;
+    font-size:15px;
+    font-weight: bolder;
+    text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+    
+    
+  }
+  
+  tr:first-child {
+    border-top:none;
+  }
+  
+  tr:last-child {
+    border-bottom:none;
+  }
+   
+  
+  
+  tr:last-child td:first-child {
+    border-bottom-left-radius:3px;
+  }
+   
+  tr:last-child td:last-child {
+    border-bottom-right-radius:3px;
+  }
+   
+  td {
+    color: rgb(49, 49, 49);
+    background:#FFFFFF;
+    padding:10px;
+    text-align:left;
+    vertical-align:middle;
+    font-family: 'Inter', sans-serif;
+    font-weight:300;
+    font-size:11px;
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+    border-right: 1px solid #C1C3D1;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  td:last-child {
+    border-right: 0px;
+  }
+
+  td p{
+    font-size: 20px;
+    text-align: center;
+  }
+
+  
+  
+  .upperhead{
+    font-family: 'Inter', sans-serif;
+    color: rgb(49, 49, 49);
+    background: white;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    
+}
+
+
+
+
+.addModal {
+    display: none;
+    position: fixed; 
+    z-index: 1; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+   
+    padding-top: 60px; 
+    text-align: center;
+}
+.addModal-content {
+    background-color:#ffffff;
+    margin: 5% auto; 
+    padding: 30px 5px 40px 5px;
+    border:none;
+   
+    width: 30%; 
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(0); /* Start scale for animation */
+    animation: bounceIn 0.6s forwards; /* Apply animation */
+  
+}
+
+.addModal-content p{
+    margin-top: 20px;
+}
+.addModal-content button{
+    margin: 20px 0 0 0;
+    padding: 10px 40px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+   border: none;
+   
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.addModal-content #modalAddSubmit {
+    background-color: #32CD32;
+    padding: 10px 40px;
+  
+    color: white;
+    margin-right: 10px;
+}
+
+.addModal-content .addModalTitle h2{
+  text-align: left;
+  margin: -15px -5px 0 -5px;
+  padding: 0 0 5px 20px;
+  border-bottom: solid 1px;
+  
+}
+.addModal-content #modalAddSubmit:hover{
+    background-color:#3ae03a;
+}
+
+.addModal-content #modalAddCancel{
+    background-color: #575757;
+    color: white;
+    margin-left:10px ;
+    padding: 10px 32px;
+}
+
+.addModal-content #modalAddCancel:hover{
+    background-color: #969696;
+    
+}
+
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    text-align: center;
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 5% auto;
+    padding: 30px 5px 30px 5px;
+    border: none;
+    width: 30%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(0); /* Start scale for animation */
+    animation: bounceIn 0.6s forwards; /* Apply animation */
+}
+
+.modal-content input {
+    border-radius: 0;
+    font-size: 15px;
+    padding: 5px 39px;
+    margin-top: 10px;
+    border: solid 1px grey;
+}
+
+.modal-content button {
+    margin: 20px 0 0 0;
+    padding: 10px 40px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.modal-content #modalSubmit {
+    background-color: red;
+    color: white;
+    margin-right: 10px;
+}
+
+.modal-content #modalSubmit:hover {
+    background-color: rgb(255, 92, 92);
+}
+
+.modal-content #modalCancel {
+    background-color: #575757;
+    color: white;
+    margin-left: 10px;
+}
+
+.modal-content #modalCancel:hover {
+    background-color: #969696;
+}
+
+.modal-content .modalTitle h2{
+    text-align: left;
+    margin: -15px -5px 0 -5px;
+    padding: 0 0 5px 20px;
+    border-bottom: solid 1px;
+    
+  }
+
+  .modal-content p{
+    margin-top: 10px;
+  }
+
+.error-message {
+    margin: 20px 0 0 0;
+    color: red;
+    display: none;
+}
+
+
+
+.addSuccessModal {
+    display: none;
+    position: fixed; 
+    z-index: 1; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    padding-top: 60px; 
+    text-align: center;
+    transform: scale(0); /* Start scale for animation */
+    animation: bounceIn 0.6s forwards; /* Apply animation */
+}
+.addSuccessModal-content {
+    background-color:#ffffff;
+    margin: 5% auto; 
+    padding: 30px 5px 30px 5px;
+    border:none;
+   
+    width: 30%; 
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  
+}
+
+
+.addSuccessModal-content button{
+    margin: 10px 0 0 0;
+  
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+   border: none;
+   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.addSuccessModal-content #modalAddSuccessConfirm {
+    background-color: #32CD32;
+    padding: 10px 40px;
+    margin-top: 20px;
+    color: white;
+}
+
+.addSuccessModal-content .addSuccessModalTitle h2{
+  text-align: left;
+  margin: -15px -5px 0 -5px;
+  padding: 0 0 5px 20px;
+  border-bottom: solid 1px;
+}
+.addSuccessModal-content #modalAddSuccessConfirm:hover{
+    background-color:#3ae03a;
+}
+
+.addSuccessModal-content p {
+    margin-top: 30px;
+   
+}
+
+
+
+
+
+
+
+
+.delSuccessModal {
+    display: none;
+    position: fixed; 
+    z-index: 1; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    padding-top: 60px; 
+    text-align: center;
+    transform: scale(0); /* Start scale for animation */
+    animation: bounceIn 0.6s forwards; /* Apply animation */
+}
+.delSuccessModal-content {
+    background-color:#ffffff;
+    margin: 5% auto; 
+    padding: 30px 5px 30px 5px;
+    border:none;
+   
+    width: 30%; 
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+
+  
+}
+
+
+.delSuccessModal-content button{
+    margin: 10px 0 0 0;
+  
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+   border: none;
+   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.delSuccessModal-content #modalDelSuccessConfirm {
+    background-color: #32CD32;
+    padding: 10px 40px;
+    margin-top: 20px;
+  
+    color: white;
+}
+
+.delSuccessModal-content .delSuccessModalTitle h2{
+  text-align: left;
+  margin: -15px -5px 0 -5px;
+  padding: 0 0 5px 20px;
+  border-bottom: solid 1px;
+}
+.delSuccessModal-content #modalDelSuccessConfirm:hover{
+    background-color:#3ae03a;
+}
+
+.delSuccessModal-content p {
+    margin-top: 30px;
+   
+}
+
+
+
+
+
+
+.searchModal {
+   display: none;
+    position: fixed; 
+    z-index: 1; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    padding-top: 60px; 
+    text-align: center;
+    transform: scale(0); /* Start scale for animation */
+    animation: bounceIn 0.6s forwards; /* Apply animation */
+}
+.searchModal-content {
+    background-color:#ffffff;
+    margin: 5% auto; 
+    padding: 30px 5px 30px 5px;
+    border:none;
+   
+    width: 30%; 
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  
+}
+
+
+.searchModal-content button{
+    margin: 10px 0 0 0;
+  
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+   border: none;
+   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.searchModal-content #modalSearchConfirm {
+    background-color: #32CD32;
+    padding: 10px 40px;
+    margin-top: 20px;
+    color: white;
+}
+
+.searchModal-content .searchModalTitle h2{
+  text-align: left;
+  margin: -15px -5px 0 -5px;
+  padding: 0 0 5px 20px;
+  border-bottom: solid 1px;
+}
+.searchModal-content #modalSearchConfirm:hover{
+    background-color:#3ae03a;
+}
+
+.searchModal-content p {
+    margin-top: 30px;
+   
+}
+
+
+
+.valModal {
+    display: none;
+    position: fixed; 
+    z-index: 1; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    padding-top: 60px; 
+    text-align: center;
+    transform: scale(0); /* Start scale for animation */
+    animation: bounceIn 0.6s forwards; /* Apply animation */
+   
+}
+.valModal-content {
+    background-color:#ffffff;
+    margin: 5% auto; 
+    padding: 30px 5px 30px 5px;
+    border:none;
+   
+    width: 30%; 
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  
+}
+
+
+.valModal-content button{
+    margin: 10px 0 0 0;
+  
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+   border: none;
+   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.valModal-content #modalValConfirm {
+    background-color: #32CD32;
+    padding: 10px 40px;
+    margin-top: 20px;
+    color: white;
+}
+
+.valModal-content .valModalTitle h2{
+  text-align: left;
+  margin: -15px -5px 0 -5px;
+  padding: 0 0 5px 20px;
+  border-bottom: solid 1px;
+}
+.valModal-content #modalValConfirm:hover{
+    background-color:#3ae03a;
+}
+
+.valModal-content p {
+    margin-top: 30px;
+   
+}
+
+body{
+    background-color: black;
+}
+
+
+.updateModal {
+    display: none;
+    position: fixed; 
+    z-index: 1; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+   
+    padding-top: 60px; 
+    text-align: center;
+}
+.updateModal-content {
+    background-color:#ffffff;
+    margin: 5% auto; 
+    padding: 30px 5px 40px 5px;
+    border:none;
+   
+    width: 30%; 
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(0); /* Start scale for animation */
+    animation: bounceIn 0.6s forwards; /* Apply animation */
+  
+}
+
+.updateModal-content p{
+    margin-top: 20px;
+}
+.updateModal-content button{
+    margin: 20px 0 0 0;
+    padding: 10px 40px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+   border: none;
+   
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.updateModal-content #modalUpdateSubmit {
+    background-color: #32CD32;
+    padding: 10px 34px;
+  
+    color: white;
+    margin-right: 10px;
+}
+
+.updateModal-content .updateModalTitle h2{
+  text-align: left;
+  margin: -15px -5px 0 -5px;
+  padding: 0 0 5px 20px;
+  border-bottom: solid 1px;
+  
+}
+.updateModal-content #modalUpdateSubmit:hover{
+    background-color:#3ae03a;
+}
+
+.updateModal-content #modalUpdateCancel{
+    background-color: #575757;
+    color: white;
+    margin-left:10px ;
+    padding: 10px 32px;
+}
+
+.updateModal-content #modalUpdateCancel:hover{
+    background-color: #969696;
+    
+}
+
+
+.updateSuccessModal {
+    display: none;
+    position: fixed; 
+    z-index: 1; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    padding-top: 60px; 
+    text-align: center;
+    transform: scale(0); /* Start scale for animation */
+    animation: bounceIn 0.6s forwards; /* Apply animation */
+   
+}
+.updateSuccessModal-content {
+    background-color:#ffffff;
+    margin: 5% auto; 
+    padding: 30px 5px 30px 5px;
+    border:none;
+   
+    width: 30%; 
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+
+  
+}
+
+
+.updateSuccessModal-content button{
+    margin: 10px 0 0 0;
+  
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+   border: none;
+   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.updateSuccessModal-content #modalSuccessUpdateConfirm {
+    background-color: #32CD32;
+    padding: 10px 40px;
+    margin-top: 20px;
+  
+    color: white;
+}
+
+.updateSuccessModal-content .updateSuccessModalTitle h2{
+  text-align: left;
+  margin: -15px -5px 0 -5px;
+  padding: 0 0 5px 20px;
+  border-bottom: solid 1px;
+}
+.updateSuccessModal-content #modalSuccessUpdateConfirm:hover{
+    background-color:#3ae03a;
+}
+
+.updateSuccessModal-content p {
+    margin-top: 30px;
+   
+}
+
+
+
+
+
+
+@media (max-width:1270px) {
+    .sidedash-container{
+     display: none;
+    }
+ 
+    .navbar{
+     width:100vw;
+    }
+    
+ }
+ 
+ @media (max-width:1079px){
+     .right-section {
+        margin-left: -50px;
+     }
+ 
+     .right-section button{
+         margin-left: 0px;
+     }
+ 
+ }
+ 
+ 
+ @media (max-width: 1015px){
+     .right-section label{
+         display: none;
+     }
+ 
+     form{
+         margin-left: 10vw;
+       
+     }
+ }
+ 
+ @media(max-width: 846px){
+     .right-section{
+         display: none;
+     }  
+ 
+ }
+
+
+
+
+
+
